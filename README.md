@@ -1,22 +1,18 @@
 # assessment-f2x
 Propuesta de soluciòn al ejercicio - f2x-v2.0.0
 
-
-# scaffolder
 # Contexto
+
 La solucion propuesta provee funcionalidades para el registro de usuarios (onboarding), registro de vehículos (enrolamiento), transacciones de pago de servicios para vehículos (parqueadero, peajes), consulta de saldos y movimientos (balances), registro de medios de pago y la posibilidad de realizar recargas a la cuenta FlyPass.
 
 # Onboarding
-![image](https://github.com/4dagio/assessment-f2x/assets/3275936/7263c75a-06a8-4684-aff3-c053e23c7c40)
+- ![image](https://github.com/4dagio/assessment-f2x/assets/3275936/7263c75a-06a8-4684-aff3-c053e23c7c40)
 
-![image](https://github.com/4dagio/assessment-f2x/assets/3275936/065a742d-aae6-46dd-b927-81f2c8c6f2d1)
-
-
+- ![image](https://github.com/4dagio/assessment-f2x/assets/3275936/065a742d-aae6-46dd-b927-81f2c8c6f2d1)
 
 # Contenedores
 
 ![image](https://github.com/4dagio/assessment-f2x/assets/3275936/27b97f0b-35d2-4fac-aece-d469eaaab426)
-
 
 La solución consiste en los siguientes contenedores:
 - [X] Frontend: Interfaz de usuario para realizar las operaciones (staff y usuarios)
