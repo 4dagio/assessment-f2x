@@ -28,7 +28,7 @@ La solución consiste en los siguientes contenedores:
 
 ### Onboarding : Sing-up/sing-in
 - El usuario inicia sesión en la aplicación web - (Sin no existe puede registrarse con correo/contraseña o  a través de Oauth2.0 )
-- El usuario se crea en el grupo de usuarios de Cognito y los atributos de usuario se rellenan basándose en las asignaciones de atributos (nombres, datos personales y data relevenate).
+- El usuario se crea en el grupo de usuarios de Cognito y los atributos de usuario se rellenan basándose en las asignaciones de atributos (nombres, datos personales y data relevante).
 - Tras una autenticación correcta, Cognito recibirá un token de acceso JWT .
 - Se devuelve un token JWT de Cognito a la aplicación.
 - El front  realiza una llamada al API Gateway.
@@ -113,7 +113,7 @@ Para las transacciones de débito y crédito el proceso sería:
 **Eventos de crédito**
 
 - Cuando un usuario recarga su billetera, una función de Lambda podría crear un evento 'CreditRequested' y enviarlo a 'EventBridge'.
-- 'EventBridg'e podría tener una regla configurada para enrutar eventos 'CreditRequested' a una cola de SQS llamada 'CreditQueue'.
+- 'EventBridge' podría tener una regla configurada para enrutar eventos 'CreditRequested' a una cola de SQS llamada 'CreditQueue'.
 - Una función de Lambda 'CreditProcessor' podría estar configurada para ser activada por los mensajes en 'CreditQueue'. Esta función tendría la lógica para agregar dinero al saldo de la billetera del usuario, sincronizar la información con el medio de pago y registrar la transacción en la tabla de DynamoDB.
 
 Este diseño permite un procesamiento asíncrono de las transacciones de débito y crédito. Además, al utilizar colas de SQS, se pueden manejar correctamente los picos de tráfico y garantizar que todas las transacciones se procesen de forma fiable, incluso si hay problemas temporales con otros componentes del sistema. utilizando tecnicas como la idempotencia con el idTransaction y el datetime 
