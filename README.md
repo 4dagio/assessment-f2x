@@ -22,8 +22,7 @@ La solución consiste en los siguientes contenedores:
 
 # Componentes
 
-![image](https://github.com/4dagio/assessment-f2x/assets/3275936/ba8fc5d0-0a7a-40f5-8138-94853e268964)
-
+![image](https://github.com/4dagio/assessment-f2x/assets/3275936/746e3efb-6727-41c7-b499-0bffb12592e5)
 # Descripción de la solución
 
 ### Onboarding : Sing-up/sing-in
@@ -108,7 +107,7 @@ Para las transacciones de débito y crédito el proceso sería:
 
 - Cuando se solicita una transacción de débito, por ejemplo, cuando un usuario paga por un servicio, una función de Lambda podría crear un evento 'DebitRequested' y enviarlo a EventBridge.
 - EventBridge podría tener una regla configurada para enrutar eventos 'DebitRequested 'a una cola de SQS llamada'DebitQueue'.
-- Una función de Lambda 'DebitProcesso'r podría estar configurada para ser activada por los mensajes en 'DebitQueue'. Esta función tendría la lógica para verificar si el usuario tiene suficiente saldo en su billetera, descontar el dinero de la billetera y registrar la transacción en la tabla de DynamoDB.
+- Una función de Lambda 'DebitProcessor' podría estar configurada para ser activada por los mensajes en 'DebitQueue'. Esta función tendría la lógica para verificar si el usuario tiene suficiente saldo en su billetera, descontar el dinero de la billetera y registrar la transacción en la tabla de DynamoDB.
 
 **Eventos de crédito**
 
